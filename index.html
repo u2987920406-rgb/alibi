@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3eee2">
+<title>Alibi — l’ordre de passage</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell" id="shell">
+  <header class="masthead">
+    <div class="brand">
+      <svg class="brand-seal" viewBox="0 0 40 40" role="img" aria-label="Alibi">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="20" cy="20" r="14" fill="none" stroke="#a8661b" stroke-width="1.2" stroke-dasharray="2 2.4"/>
+        <circle cx="20" cy="16" r="4.6" fill="currentColor"/>
+        <path d="M17.4 18.5 L15.6 28 H24.4 L22.6 18.5 Z" fill="currentColor"/>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">Alibi</span>
+        <span class="brand-sub">Archives de nuit · musée Vauclair</span>
+      </div>
+    </div>
+    <div class="case-nav">
+      <label class="case-pick">
+        <span class="sr-only">Choisir l’affaire</span>
+        <select id="case-select"></select>
+      </label>
+      <button class="icon-btn" id="next-case" type="button" aria-label="Affaire suivante" title="Affaire suivante">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="dossier-toggle" type="button" aria-expanded="false" aria-controls="dossier" aria-label="Dossier de l’affaire" title="Dossier de l’affaire">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h6l2 2h10v10.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 10.5h18" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <p class="tally" id="tally" role="status" aria-live="polite"></p>
+
+  <main class="desk" id="desk">
+    <section class="dossier" id="dossier" aria-labelledby="dossier-title">
+      <div class="dossier-head">
+        <p class="dossier-kicker" id="dossier-kicker"></p>
+        <h1 class="dossier-title" id="dossier-title"></h1>
+        <button class="icon-btn dossier-close" id="dossier-close" type="button" aria-label="Fermer le dossier">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="dossier-body">
+        <p class="story" id="story"></p>
+        <h2 class="paper-h">Ont traversé le hall</h2>
+        <ul class="cast" id="cast"></ul>
+        <h2 class="paper-h">Règles</h2>
+        <ol class="rules">
+          <li>Placez chaque personne à son passage, de 23 h (en haut) à 6 h (en bas). Une seule personne par passage.</li>
+          <li>Exactement <strong>une</strong> déclaration est fausse ; toutes les autres sont vraies. Touchez son numéro pour la tamponner <span class="faux-word">FAUX</span>.</li>
+          <li>« Avant » et « après » valent à n’importe quelle distance ; « juste avant » veut dire immédiatement avant.</li>
+          <li>Le passage marqué <span class="theft-dot" aria-hidden="true"></span> est celui du vol : la personne qui l’occupe est le coupable.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="timeline" aria-labelledby="timeline-title">
+      <h2 class="sr-only" id="timeline-title">Ligne du temps, de 23 h à 6 h</h2>
+      <p class="hour hour-start">23 h</p>
+      <ol class="slots" id="slots"></ol>
+      <p class="hour hour-end">6 h</p>
+    </section>
+
+    <section class="statements" aria-labelledby="statements-title">
+      <h2 class="statements-title" id="statements-title">Déclarations</h2>
+      <div class="statements-scroll" id="statements-scroll">
+        <p class="howto">Une seule est fausse : touchez son numéro.</p>
+        <ol class="statement-list" id="statements"></ol>
+      </div>
+      <div class="picker" id="picker" role="dialog" aria-modal="false" aria-labelledby="picker-title" hidden>
+        <div class="picker-head">
+          <h2 class="picker-title" id="picker-title"></h2>
+          <button class="icon-btn" id="picker-close" type="button" aria-label="Fermer le choix">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="picker-grid" id="picker-grid"></div>
+        <button class="picker-clear" id="picker-clear" type="button">Laisser vide</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="actions" aria-label="Actions">
+    <button class="act act-primary" id="act-check" type="button">Vérifier</button>
+    <button class="act" id="act-hint" type="button">Indice</button>
+    <button class="act" id="act-clear" type="button" data-label="Effacer">Effacer</button>
+    <button class="act" id="act-solve" type="button" data-label="Solution">Solution</button>
+    <button class="act act-next" id="act-next" type="button">Affaire suivante</button>
+  </nav>
+</div>
+
+<div class="verdict" id="verdict" role="dialog" aria-modal="true" aria-labelledby="verdict-stamp" hidden>
+  <div class="verdict-card">
+    <p class="verdict-stamp" id="verdict-stamp">Affaire classée</p>
+    <p class="verdict-text" id="verdict-text"></p>
+    <div class="verdict-actions">
+      <button class="act act-primary" id="verdict-next" type="button">Affaire suivante</button>
+      <button class="act" id="verdict-close" type="button">Revoir</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

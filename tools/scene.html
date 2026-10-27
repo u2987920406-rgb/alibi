@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alibi scene</title>
+<style>html, body { margin: 0; height: 100%; overflow: hidden; } iframe { border: 0; display: block; width: 100vw; height: 100vh; }</style>
+</head>
+<body>
+<!-- Drives the game into a state for screenshots:
+     ?case=12&scene=picker|checked|won|hints|dossier|solution -->
+<iframe id="game" title="Alibi"></iframe>
+<script>
+'use strict';
+const params = new URLSearchParams(location.search);
+const scene = params.get('scene') || 'fresh';
+const frame = document.getElementById('game');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+frame.src = `../index.html?case=${params.get('case') || 1}`;
+frame.onload = async () => {
+  const doc = frame.contentDocument;
+  for (let i = 0; i < 50 && !doc.querySelector('.statement'); i++) await sleep(100);
+  const app = frame.contentWindow.alibi;
+  const c = app.state.cases[app.state.index];
+  const q = (s) => doc.querySelector(s);
+  const fill = (order) => order.forEach((person, slot) => {
+    if (app.state.picking !== slot) q(`.slot[data-slot="${slot}"]`).click();
+    q(`.pick[data-person="${person}"]`).click();
+  });
+  const truth = app.solutionOrder();
+  if (scene === 'picker') {
+    fill(truth.slice(0, 3));
+  } else if (scene === 'checked') {
+    const order = truth.slice();
+    [order[2], order[5]] = [order[5], order[2]];
+    fill(order.slice(0, order.length - 1));
+    if (!q('#picker').hidden) q('#picker-close').click();
+    q(`.flag[data-index="${(c.liar + 1) % c.statements.length}"]`).click();
+    q('#act-check').click();
+  } else if (scene === 'won') {
+    fill(truth);
+    q(`.flag[data-index="${c.liar}"]`).click();
+    q('#act-check').click();
+  } else if (scene === 'hints') {
+    for (let k = 0; k < 3; k++) q('#act-hint').click();
+  } else if (scene === 'dossier') {
+    q('#dossier-toggle').click();
+  } else if (scene === 'solution') {
+    q('#act-solve').click(); q('#act-solve').click();
+  }
+};
+</script>
+</body>
+</html>

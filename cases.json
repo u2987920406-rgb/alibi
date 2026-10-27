@@ -1,0 +1,805 @@
+{
+  "seed": "alibi-vauclair-2026",
+  "cases": [
+    {
+      "number": 1,
+      "difficulty": "facile",
+      "title": "Le camée bleu",
+      "object": "le camée bleu de Pompéi",
+      "room": "de la salle des antiques",
+      "story": "À 6 h, la vitrine de la salle des antiques est vide : le camée bleu de Pompéi a disparu. Les caméras du hall étaient coupées ; six personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Sept déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Basile",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Elsa",
+          "gender": "f",
+          "role": "traiteuse"
+        },
+        {
+          "name": "Igor",
+          "gender": "m",
+          "role": "mécène"
+        },
+        {
+          "name": "Iris",
+          "gender": "f",
+          "role": "électricienne"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "guide"
+        },
+        {
+          "name": "Théo",
+          "gender": "m",
+          "role": "restaurateur"
+        }
+      ],
+      "statements": [
+        "Basile est passé juste avant Iris.",
+        "Igor est passé juste après Elsa.",
+        "Rémi est passé en premier.",
+        "Basile est passé juste après Igor.",
+        "Basile est passé en deuxième position.",
+        "Théo est passé en quatrième position.",
+        "Théo est passé juste avant Elsa."
+      ],
+      "solution": [
+        "Rémi",
+        "Basile",
+        "Iris",
+        "Théo",
+        "Elsa",
+        "Igor"
+      ],
+      "liar": 3,
+      "culprit": "Elsa"
+    },
+    {
+      "number": 2,
+      "difficulty": "facile",
+      "title": "La montre du Régent",
+      "object": "la montre en or du Régent",
+      "room": "de la galerie des horloges",
+      "story": "À 6 h, la vitrine de la galerie des horloges est vide : la montre en or du Régent a disparu. Les caméras du hall étaient coupées ; six personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 2ᵉ passage. Sept déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 1,
+      "people": [
+        {
+          "name": "Ada",
+          "gender": "f",
+          "role": "photographe"
+        },
+        {
+          "name": "Iris",
+          "gender": "f",
+          "role": "gardienne de nuit"
+        },
+        {
+          "name": "Lise",
+          "gender": "f",
+          "role": "agente d’entretien"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "restaurateur"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Théo",
+          "gender": "m",
+          "role": "conservateur"
+        }
+      ],
+      "statements": [
+        "Théo est passé juste après Lise.",
+        "Il y avait exactement deux personnes entre Lise et Rémi.",
+        "Lise est passée après Rémi.",
+        "Théo est passé en deuxième position.",
+        "Rémi est passé juste avant Omar.",
+        "Rémi est passé en quatrième position.",
+        "Iris est passée en troisième position."
+      ],
+      "solution": [
+        "Lise",
+        "Théo",
+        "Iris",
+        "Rémi",
+        "Omar",
+        "Ada"
+      ],
+      "liar": 2,
+      "culprit": "Théo"
+    },
+    {
+      "number": 3,
+      "difficulty": "facile",
+      "title": "Le scarabée d’or",
+      "object": "le scarabée d’or de Karnak",
+      "room": "de l’aile égyptienne",
+      "story": "À 6 h, la vitrine de l’aile égyptienne est vide : le scarabée d’or de Karnak a disparu. Les caméras du hall étaient coupées ; six personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Sept déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Inès",
+          "gender": "f",
+          "role": "livreuse"
+        },
+        {
+          "name": "Noé",
+          "gender": "m",
+          "role": "gardien de nuit"
+        },
+        {
+          "name": "Odile",
+          "gender": "f",
+          "role": "électricienne"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "traiteur"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "photographe"
+        },
+        {
+          "name": "Rose",
+          "gender": "f",
+          "role": "pompière de garde"
+        }
+      ],
+      "statements": [
+        "Il y avait exactement deux personnes entre Omar et Rose.",
+        "Rémi est passé juste avant Inès.",
+        "Odile est passée en premier.",
+        "Inès est passée en dernier.",
+        "Odile est passée juste après Rose.",
+        "Omar est passé juste après Noé.",
+        "Omar est passé en quatrième position."
+      ],
+      "solution": [
+        "Rose",
+        "Odile",
+        "Noé",
+        "Omar",
+        "Rémi",
+        "Inès"
+      ],
+      "liar": 2,
+      "culprit": "Rémi"
+    },
+    {
+      "number": 4,
+      "difficulty": "facile",
+      "title": "L’astrolabe",
+      "object": "l’astrolabe de Nuremberg",
+      "room": "du cabinet des sciences",
+      "story": "À 6 h, la vitrine du cabinet des sciences est vide : l’astrolabe de Nuremberg a disparu. Les caméras du hall étaient coupées ; six personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Sept déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Basile",
+          "gender": "m",
+          "role": "restaurateur"
+        },
+        {
+          "name": "Hugo",
+          "gender": "m",
+          "role": "photographe"
+        },
+        {
+          "name": "Igor",
+          "gender": "m",
+          "role": "gardien de nuit"
+        },
+        {
+          "name": "Marc",
+          "gender": "m",
+          "role": "traiteur"
+        },
+        {
+          "name": "Odile",
+          "gender": "f",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Zoé",
+          "gender": "f",
+          "role": "guide"
+        }
+      ],
+      "statements": [
+        "Zoé est passée juste après Igor.",
+        "Marc est passé après Igor mais avant Odile.",
+        "Zoé est passée en dernier.",
+        "Hugo est passé en premier.",
+        "Basile est passé juste après Odile.",
+        "Odile est passée en troisième position.",
+        "Igor est passé juste après Basile."
+      ],
+      "solution": [
+        "Hugo",
+        "Marc",
+        "Odile",
+        "Basile",
+        "Igor",
+        "Zoé"
+      ],
+      "liar": 1,
+      "culprit": "Igor"
+    },
+    {
+      "number": 5,
+      "difficulty": "moyenne",
+      "title": "Le carnet vert",
+      "object": "le carnet de croquis vert",
+      "room": "de la salle des dessins",
+      "story": "À 6 h, la vitrine de la salle des dessins est vide : le carnet de croquis vert a disparu. Les caméras du hall étaient coupées ; sept personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 4ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 3,
+      "people": [
+        {
+          "name": "Ada",
+          "gender": "f",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Iris",
+          "gender": "f",
+          "role": "pompière de garde"
+        },
+        {
+          "name": "Jade",
+          "gender": "f",
+          "role": "gardienne de nuit"
+        },
+        {
+          "name": "Nina",
+          "gender": "f",
+          "role": "conservatrice"
+        },
+        {
+          "name": "Noé",
+          "gender": "m",
+          "role": "restaurateur"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "agent d’entretien"
+        },
+        {
+          "name": "Zoé",
+          "gender": "f",
+          "role": "guide"
+        }
+      ],
+      "statements": [
+        "Il y avait exactement une personne entre Ada et Zoé.",
+        "Il y avait exactement trois personnes entre Iris et Nina.",
+        "Iris est passée après Noé mais avant Ada.",
+        "Ada n’est passée ni en premier ni en dernier.",
+        "Iris est passée juste avant Omar.",
+        "Zoé est passée juste avant Nina.",
+        "Il y avait exactement quatre personnes entre Nina et Noé.",
+        "Il y avait exactement quatre personnes entre Ada et Iris."
+      ],
+      "solution": [
+        "Noé",
+        "Iris",
+        "Omar",
+        "Jade",
+        "Zoé",
+        "Nina",
+        "Ada"
+      ],
+      "liar": 3,
+      "culprit": "Jade"
+    },
+    {
+      "number": 6,
+      "difficulty": "moyenne",
+      "title": "La broche libellule",
+      "object": "la broche libellule en émail",
+      "room": "de la galerie Art nouveau",
+      "story": "À 6 h, la vitrine de la galerie Art nouveau est vide : la broche libellule en émail a disparu. Les caméras du hall étaient coupées ; sept personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Hugo",
+          "gender": "m",
+          "role": "traiteur"
+        },
+        {
+          "name": "Inès",
+          "gender": "f",
+          "role": "agente d’entretien"
+        },
+        {
+          "name": "Léa",
+          "gender": "f",
+          "role": "conservatrice"
+        },
+        {
+          "name": "Lise",
+          "gender": "f",
+          "role": "guide"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "électricien"
+        },
+        {
+          "name": "Théo",
+          "gender": "m",
+          "role": "mécène"
+        }
+      ],
+      "statements": [
+        "Léa est passée juste avant Théo.",
+        "Inès est passée avant Lise.",
+        "Lise est passée juste après Théo.",
+        "Léa est passée juste après Rémi.",
+        "Théo est passé après Léa mais avant Inès.",
+        "Léa est passée après Hugo mais avant Inès.",
+        "Il y avait exactement trois personnes entre Inès et Léa.",
+        "Léa est passée après Hugo mais avant Omar."
+      ],
+      "solution": [
+        "Hugo",
+        "Rémi",
+        "Léa",
+        "Théo",
+        "Lise",
+        "Omar",
+        "Inès"
+      ],
+      "liar": 1,
+      "culprit": "Lise"
+    },
+    {
+      "number": 7,
+      "difficulty": "moyenne",
+      "title": "Le sceau perdu",
+      "object": "le sceau de cire des ducs",
+      "room": "de la salle des chartes",
+      "story": "À 6 h, la vitrine de la salle des chartes est vide : le sceau de cire des ducs a disparu. Les caméras du hall étaient coupées ; sept personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 4ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 3,
+      "people": [
+        {
+          "name": "Félix",
+          "gender": "m",
+          "role": "pompier de garde"
+        },
+        {
+          "name": "Malo",
+          "gender": "m",
+          "role": "électricien"
+        },
+        {
+          "name": "Noé",
+          "gender": "m",
+          "role": "restaurateur"
+        },
+        {
+          "name": "Odile",
+          "gender": "f",
+          "role": "conservatrice"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Yann",
+          "gender": "m",
+          "role": "gardien de nuit"
+        },
+        {
+          "name": "Zoé",
+          "gender": "f",
+          "role": "traiteuse"
+        }
+      ],
+      "statements": [
+        "Il y avait exactement deux personnes entre Odile et Zoé.",
+        "Yann est passé juste après Odile.",
+        "Félix est passé juste après Zoé.",
+        "Il y avait exactement trois personnes entre Noé et Zoé.",
+        "Yann est passé juste avant Omar.",
+        "Yann est passé après Odile mais avant Félix.",
+        "Il y avait exactement deux personnes entre Félix et Odile.",
+        "Noé est passé juste après Malo."
+      ],
+      "solution": [
+        "Malo",
+        "Noé",
+        "Odile",
+        "Yann",
+        "Omar",
+        "Zoé",
+        "Félix"
+      ],
+      "liar": 6,
+      "culprit": "Yann"
+    },
+    {
+      "number": 8,
+      "difficulty": "moyenne",
+      "title": "L’éventail",
+      "object": "l’éventail de nacre",
+      "room": "du salon XVIIIᵉ",
+      "story": "À 6 h, la vitrine du salon XVIIIᵉ est vide : l’éventail de nacre a disparu. Les caméras du hall étaient coupées ; sept personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Hugo",
+          "gender": "m",
+          "role": "électricien"
+        },
+        {
+          "name": "Léa",
+          "gender": "f",
+          "role": "traiteuse"
+        },
+        {
+          "name": "Noé",
+          "gender": "m",
+          "role": "guide"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Rose",
+          "gender": "f",
+          "role": "restauratrice"
+        },
+        {
+          "name": "Théo",
+          "gender": "m",
+          "role": "livreur"
+        },
+        {
+          "name": "Zoé",
+          "gender": "f",
+          "role": "gardienne de nuit"
+        }
+      ],
+      "statements": [
+        "Théo est passé juste avant Léa.",
+        "Léa est passée après Rose mais avant Noé.",
+        "Zoé est passée après Théo mais avant Omar.",
+        "Léa est passée après Hugo mais avant Zoé.",
+        "Il y avait exactement une personne entre Hugo et Omar.",
+        "Il y avait exactement une personne entre Hugo et Léa.",
+        "Il y avait exactement trois personnes entre Rose et Zoé.",
+        "Noé est passé juste après Omar."
+      ],
+      "solution": [
+        "Rose",
+        "Hugo",
+        "Théo",
+        "Léa",
+        "Zoé",
+        "Omar",
+        "Noé"
+      ],
+      "liar": 4,
+      "culprit": "Zoé"
+    },
+    {
+      "number": 9,
+      "difficulty": "difficile",
+      "title": "La boussole",
+      "object": "la boussole de l’expédition polaire",
+      "room": "de la salle des voyages",
+      "story": "À 6 h, la vitrine de la salle des voyages est vide : la boussole de l’expédition polaire a disparu. Les caméras du hall étaient coupées ; huit personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 6ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 5,
+      "people": [
+        {
+          "name": "Ada",
+          "gender": "f",
+          "role": "guide"
+        },
+        {
+          "name": "Elsa",
+          "gender": "f",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Hugo",
+          "gender": "m",
+          "role": "gardien de nuit"
+        },
+        {
+          "name": "Jade",
+          "gender": "f",
+          "role": "électricienne"
+        },
+        {
+          "name": "Jules",
+          "gender": "m",
+          "role": "pompier de garde"
+        },
+        {
+          "name": "Léa",
+          "gender": "f",
+          "role": "livreuse"
+        },
+        {
+          "name": "Malo",
+          "gender": "m",
+          "role": "conservateur"
+        },
+        {
+          "name": "Rose",
+          "gender": "f",
+          "role": "restauratrice"
+        }
+      ],
+      "statements": [
+        "Léa est passée après Ada mais avant Elsa.",
+        "Il y avait exactement quatre personnes entre Ada et Elsa.",
+        "Léa est passée après Jules mais avant Hugo.",
+        "Il y avait exactement quatre personnes entre Léa et Rose.",
+        "Il y avait exactement une personne entre Elsa et Hugo.",
+        "Rose n’est passée ni en premier ni en dernier.",
+        "Malo est passé après Hugo mais avant Rose.",
+        "Ada est passée après Jules mais avant Malo."
+      ],
+      "solution": [
+        "Jules",
+        "Ada",
+        "Léa",
+        "Jade",
+        "Hugo",
+        "Malo",
+        "Elsa",
+        "Rose"
+      ],
+      "liar": 5,
+      "culprit": "Malo"
+    },
+    {
+      "number": 10,
+      "difficulty": "difficile",
+      "title": "Le bouddha de jade",
+      "object": "le petit bouddha de jade",
+      "room": "de l’aile asiatique",
+      "story": "À 6 h, la vitrine de l’aile asiatique est vide : le petit bouddha de jade a disparu. Les caméras du hall étaient coupées ; huit personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Elsa",
+          "gender": "f",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Igor",
+          "gender": "m",
+          "role": "mécène"
+        },
+        {
+          "name": "Léa",
+          "gender": "f",
+          "role": "photographe"
+        },
+        {
+          "name": "Lise",
+          "gender": "f",
+          "role": "guide"
+        },
+        {
+          "name": "Marc",
+          "gender": "m",
+          "role": "traiteur"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "électricien"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "conservateur"
+        },
+        {
+          "name": "Rose",
+          "gender": "f",
+          "role": "livreuse"
+        }
+      ],
+      "statements": [
+        "Omar est passé après Elsa mais avant Marc.",
+        "Il y avait exactement deux personnes entre Igor et Lise.",
+        "Léa est passée après Lise mais avant Rose.",
+        "Il y avait exactement quatre personnes entre Igor et Marc.",
+        "Rose est passée après Omar mais avant Rémi.",
+        "Omar est passé après Igor mais avant Lise.",
+        "Rose est passée juste après Léa.",
+        "Il y avait exactement une personne entre Marc et Rémi."
+      ],
+      "solution": [
+        "Igor",
+        "Elsa",
+        "Omar",
+        "Lise",
+        "Léa",
+        "Marc",
+        "Rose",
+        "Rémi"
+      ],
+      "liar": 6,
+      "culprit": "Léa"
+    },
+    {
+      "number": 11,
+      "difficulty": "difficile",
+      "title": "La clé d’argent",
+      "object": "la clé d’argent du trésor",
+      "room": "de la salle du trésor",
+      "story": "À 6 h, la vitrine de la salle du trésor est vide : la clé d’argent du trésor a disparu. Les caméras du hall étaient coupées ; huit personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 6ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 5,
+      "people": [
+        {
+          "name": "Basile",
+          "gender": "m",
+          "role": "photographe"
+        },
+        {
+          "name": "Elsa",
+          "gender": "f",
+          "role": "conservatrice"
+        },
+        {
+          "name": "Igor",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Jules",
+          "gender": "m",
+          "role": "électricien"
+        },
+        {
+          "name": "Nina",
+          "gender": "f",
+          "role": "mécène"
+        },
+        {
+          "name": "Omar",
+          "gender": "m",
+          "role": "agent d’entretien"
+        },
+        {
+          "name": "Rose",
+          "gender": "f",
+          "role": "restauratrice"
+        },
+        {
+          "name": "Yann",
+          "gender": "m",
+          "role": "gardien de nuit"
+        }
+      ],
+      "statements": [
+        "Elsa est passée après Yann mais avant Omar.",
+        "Nina est passée après Yann mais avant Elsa.",
+        "Il y avait exactement trois personnes entre Basile et Jules.",
+        "Jules est passé après Igor mais avant Nina.",
+        "Il y avait exactement quatre personnes entre Basile et Yann.",
+        "Jules est passé avant Yann.",
+        "Il y avait exactement une personne entre Jules et Rose.",
+        "Rose est passée après Nina mais avant Elsa."
+      ],
+      "solution": [
+        "Igor",
+        "Yann",
+        "Jules",
+        "Nina",
+        "Rose",
+        "Elsa",
+        "Basile",
+        "Omar"
+      ],
+      "liar": 5,
+      "culprit": "Elsa"
+    },
+    {
+      "number": 12,
+      "difficulty": "difficile",
+      "title": "Le dernier masque",
+      "object": "le masque de bal vénitien",
+      "room": "de la galerie des fêtes",
+      "story": "À 6 h, la vitrine de la galerie des fêtes est vide : le masque de bal vénitien a disparu. Les caméras du hall étaient coupées ; huit personnes l’ont traversé entre 23 h et 6 h, une à la fois. La vitrine a été forcée pendant le 5ᵉ passage. Huit déclarations ont été recueillies — une seule est fausse.",
+      "theftSlot": 4,
+      "people": [
+        {
+          "name": "Félix",
+          "gender": "m",
+          "role": "traiteur"
+        },
+        {
+          "name": "Iris",
+          "gender": "f",
+          "role": "agente d’entretien"
+        },
+        {
+          "name": "Jade",
+          "gender": "f",
+          "role": "livreuse"
+        },
+        {
+          "name": "Jules",
+          "gender": "m",
+          "role": "restaurateur"
+        },
+        {
+          "name": "Malo",
+          "gender": "m",
+          "role": "mécène"
+        },
+        {
+          "name": "Marc",
+          "gender": "m",
+          "role": "pompier de garde"
+        },
+        {
+          "name": "Rémi",
+          "gender": "m",
+          "role": "stagiaire"
+        },
+        {
+          "name": "Zoé",
+          "gender": "f",
+          "role": "gardienne de nuit"
+        }
+      ],
+      "statements": [
+        "Iris est passée après Rémi mais avant Félix.",
+        "Malo est passé après Iris mais avant Jade.",
+        "Jade est passée après Iris mais avant Félix.",
+        "Il y avait exactement deux personnes entre Jade et Malo.",
+        "Il y avait exactement deux personnes entre Jade et Jules.",
+        "Zoé est passée après Iris mais avant Malo.",
+        "Malo est passé après Rémi mais avant Jules.",
+        "Jules est passé après Zoé mais avant Marc."
+      ],
+      "solution": [
+        "Rémi",
+        "Iris",
+        "Zoé",
+        "Malo",
+        "Jules",
+        "Marc",
+        "Jade",
+        "Félix"
+      ],
+      "liar": 4,
+      "culprit": "Jules"
+    }
+  ]
+}
